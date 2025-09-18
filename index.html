@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Yago Franco | WDD 130</title>
+  <title>Yago Franco | WDD130</title>
 
   <!-- W02 required meta tags -->
   <meta name="description" content="Home page of Yago Franco for the WDD130 course. HTML and CSS practice.">
@@ -16,28 +16,39 @@
     <nav>
       <a href="#">Home</a>
       <a href="#">Rafting Website</a>
+      <!-- W03: external links (generic) -->
+      <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>
     </nav>
   </header>
 
   <main>
-    <h1>Yago Franco | WDD 130</h1>
-    <img src="images/profile.jpg" alt="Hello, my name is Yago Franco">
-    <p>Hello! My name is Yago Franco and I am from Brazil.</p>
+    <h1>Yago Franco | WDD130</h1>
+    <img src="images/profile.jpg" alt="Hello, my name is Yago Franco" width="200">
+    <p>
+      Hello! My name is Yago Franco and I am from Brazil.
+    </p>
+
+    <!-- W03: List of temples in Brazil -->
+    <ul class="box">
+      <li><a href="https://www.churchofjesuschrist.org/temples/details/sao-paulo-brazil-temple" target="_blank" rel="noopener">São Paulo Brazil Temple</a></li>
+      <li><a href="https://www.churchofjesuschrist.org/temples/details/recife-brazil-temple" target="_blank" rel="noopener">Recife Brazil Temple</a></li>
+      <li><a href="https://www.churchofjesuschrist.org/temples/details/porto-alegre-brazil-temple" target="_blank" rel="noopener">Porto Alegre Brazil Temple</a></li>
+    </ul>
   </main>
 
   <!-- Aside section required by W02 -->
-<aside>
-  <h2>Brazil</h2>
-<img src="images/brazil.jpg" alt="Brazil flag">
-  <p>Brazil is known for its cultural diversity, beautiful nature, and friendly people and also the best food in the entire world.
-    
-  </p>
-</aside>
-
-
+  <aside class="box">
+    <h2>Brazil</h2>
+    <img src="images/brazil.jpg" alt="Brazil flag" width="200">
+    <p>
+      Brazil is known for its cultural diversity, beautiful nature, and friendly people. 
+      It also has some of the best food in the world.
+    </p>
+  </aside>
 
   <footer>
-    <p>&copy; 2025 Yago Franco</p>
+    <p>©2025 • Yago Franco • São Paulo, Brazil</p>
   </footer>
 </body>
 </html>
