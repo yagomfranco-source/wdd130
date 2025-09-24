@@ -4,8 +4,11 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yago Franco | WDD 130</title>
+
+  <!-- W02 meta -->
   <meta name="description" content="Home page of Yago Franco for the WDD130 course. HTML and CSS practice." />
   <meta name="author" content="Yago Franco" />
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -22,22 +25,25 @@
     <h1>Yago Franco | WDD130</h1>
 
     <section class="intro">
-      <!-- profile picture -->
-      <img class="profile" src="wwr/images/profile.jpg" alt="Hello, my name is Yago Franco" onerror="this.style.display='none'">
-      <p>Hello! My name is Yago Franco and I am from Brazil.</p>
-
-      <div class="links">
-        <ul>
-          <li><a href="https://www.churchofjesuschrist.org/temples/details/sao-paulo-brazil-temple" target="_blank" rel="noopener">São Paulo Brazil Temple</a></li>
-          <li><a href="https://www.churchofjesuschrist.org/temples/details/recife-brazil-temple" target="_blank" rel="noopener">Recife Brazil Temple</a></li>
-          <li><a href="https://www.churchofjesuschrist.org/temples/details/porto-alegre-brazil-temple" target="_blank" rel="noopener">Porto Alegre Brazil Temple</a></li>
-        </ul>
+      <!-- left column: text + links -->
+      <div class="intro-text">
+        <p>Hello! My name is Yago Franco and I am from Brazil.</p>
+        <div class="links">
+          <ul>
+            <li><a href="https://www.churchofjesuschrist.org/temples/details/sao-paulo-brazil-temple" target="_blank" rel="noopener">São Paulo Brazil Temple</a></li>
+            <li><a href="https://www.churchofjesuschrist.org/temples/details/recife-brazil-temple" target="_blank" rel="noopener">Recife Brazil Temple</a></li>
+            <li><a href="https://www.churchofjesuschrist.org/temples/details/porto-alegre-brazil-temple" target="_blank" rel="noopener">Porto Alegre Brazil Temple</a></li>
+          </ul>
+        </div>
       </div>
+
+      <!-- right column: profile picture -->
+      <img class="profile" src="wwr/images/profile.jpg" alt="Hello, my name is Yago Franco"
+           onerror="this.style.display='none'">
     </section>
 
     <aside class="box">
       <h2>Brazil</h2>
-      <!-- flag -->
       <img src="wwr/images/brazil.jpg" alt="Brazil flag" onerror="this.style.display='none'">
       <p>
         Brazil is known for its cultural diversity, beautiful nature, and friendly people.

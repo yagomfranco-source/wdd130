@@ -37,7 +37,7 @@ header{
 .brand img{ width: 40px; height: 40px; object-fit: contain; }
 .brand-text{ font-weight: 700; }
 
-nav{ display: flex; gap: 1rem; flex-wrap: wrap; }
+nav{ display: flex; gap: 1rem; flex-wrap: wrap; align-items: center; }
 nav a{
   text-decoration: none;
   color: var(--ink);
@@ -46,7 +46,7 @@ nav a{
 }
 nav a:hover, nav a.active{ background: var(--bg); }
 
-/* ===== Hero ===== */
+/* ===== Hero Section ===== */
 .hero{
   position: relative;
   margin-top: var(--gap);
@@ -71,7 +71,15 @@ nav a:hover, nav a.active{ background: var(--bg); }
 }
 .hero-card h1{ margin-bottom: .25rem; }
 
-/* ===== History ===== */
+/* audit check: float image inside hero article */
+.hero article .article-photo{
+  float: right;
+  margin: 0 0 1rem 1rem;
+  max-width: 200px;
+  height: auto;
+}
+
+/* ===== History Section ===== */
 .history{ padding-block: 1.25rem; }
 .history h2{ margin-bottom: .75rem; }
 .history-grid{
@@ -88,7 +96,7 @@ nav a:hover, nav a.active{ background: var(--bg); }
   border: var(--border);
 }
 
-/* ===== Gallery ===== */
+/* ===== Adventure Gallery ===== */
 .adventure{ padding-block: 1.25rem; }
 .adventure h2{ margin-bottom: .75rem; }
 
@@ -115,6 +123,13 @@ footer{
   border-top: var(--border);
   margin-top: 1.5rem;
 }
+
+/* audit check: .socialmedia with no underline on links */
+.socialmedia{ display: flex; gap: .5rem; }
+.socialmedia a{ text-decoration: none; }
+.socialmedia img{ width: 32px; height: 32px; display: block; }
+
+/* legacy .social (in case used elsewhere) */
 footer .social{ display: flex; gap: .5rem; }
 footer .social a{ text-decoration: none; color: var(--brand); }
 

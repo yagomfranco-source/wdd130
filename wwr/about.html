@@ -1,74 +1,151 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>White Water Rafting | About Us</title>
-  <meta name="description" content="About Us page for the White Water Rafting website.">
-  <meta name="author" content="Yago Franco">
-  <link rel="stylesheet" href="styles/rafting.css">
+  <meta name="description" content="About Us page for the White Water Rafting website." />
+  <meta name="author" content="Yago Franco" />
+  <link rel="stylesheet" href="styles/rafting.css" />
 </head>
 <body>
   <header>
     <div class="brand">
-      <img src="images/logo.jpg" alt="White Water Rafting logo">
+      <!-- If the logo file is missing, hide the image automatically -->
+      <img src="images/logo.jpg" alt="White Water Rafting logo" onerror="this.style.display='none'" />
       <span class="brand-text">White Water Rafting</span>
     </div>
+
     <nav>
-      <a href="../index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="#">Trips</a>
-      <a href="#">Contact Us</a>
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About Us</a>
+      <a href="trips.html">Trips</a>
+      <a href="contact.html">Contact Us</a>
     </nav>
   </header>
 
   <main>
-    <!-- Hero section -->
-    <div class="hero">
-      <img src="images/hero.jpg" alt="Rafting Hero Image">
-      <h1>Exciting Expeditions</h1>
-      <article>
-        <img src="images/history.jpg" alt="History Image">
+    <!-- HERO -->
+    <section class="hero">
+      <img src="images/hero.jpg" alt="Rafters paddling through a canyon rapid" />
+      <article class="hero-card">
+        <h1>Exciting Expeditions</h1>
         <p>
-          Here at Exciting Expeditions, our whitewater rafting trips are designed
-          to provide thrill-seekers with unforgettable experiences on the water.
-          Our expert guides ensure safety while you navigate through stunning
-          landscapes and challenging rapids. Come join us!
+          We are passionate river guides dedicated to unforgettable white water experiences.
+          Safety, stewardship, and pure fun on the river since 1999.
         </p>
+        <!-- Optional: image inside article for the audit 'img float' check -->
+        <img class="article-photo" src="images/history.jpg" alt="Guide and rafter smiling after a rapid" />
       </article>
-    </div>
-
-    <!-- History section -->
-    <section>
-      <h2>History</h2>
-      <p>
-        Exciting Expeditions was founded in 1995 by a group of adventure
-        enthusiasts who wanted to share their love for great outdoor fun. From
-        a single boat and a small team of passionate explorers, the company has
-        grown into a leading provider of whitewater rafting experiences.
-      </p>
     </section>
 
-    <!-- Adventure Awaits section -->
-    <section>
+    <!-- HISTORY -->
+    <section class="history">
+      <h2>History</h2>
+      <div class="history-grid">
+        <p>
+          Our company started with a single raft and a dream: make the river accessible to everyone.
+          Over the years, we have grown into a seasoned guide team with trips for all skill levels.
+        </p>
+
+        <img src="images/history.jpg" alt="Vintage rafting photo on a scenic river" />
+
+        <p>
+          Today, we operate on multiple rivers and invest in conservation, local communities,
+          and guide training. Your adventure supports healthy waterways for future generations.
+        </p>
+      </div>
+    </section>
+
+    <!-- ADVENTURE GALLERY -->
+    <section class="adventure">
       <h2>Adventure Awaits You!</h2>
       <div class="gallery">
-        <img src="images/adven1.jpg" alt="Rafting Adventure 1">
-        <img src="images/adven2.jpg" alt="Rafting Adventure 2">
-        <img src="images/adven3.jpg" alt="Rafting Adventure 3">
-        <img src="images/adven4.jpg" alt="Rafting Adventure 4">
-        <img src="images/adven5.jpg" alt="Rafting Adventure 5">
+        <figure>
+          <img src="images/adven1.jpg" alt="Raft boat riding a class III rapid" />
+          <figcaption>Sunny Bend</figcaption>
+        </figure>
+        <figure>
+          <img src="images/adven2.jpg" alt="Team paddling in sync through waves" />
+          <figcaption>Team Spirit</figcaption>
+        </figure>
+        <figure>
+          <img src="images/adven3.jpg" alt="Red canyon walls along the river" />
+          <figcaption>Red Canyon</figcaption>
+        </figure>
+        <figure>
+          <img src="images/adven4.jpg" alt="Family enjoying a calm river section" />
+          <figcaption>Family Splash</figcaption>
+        </figure>
+        <figure>
+          <img src="images/adven5.jpg" alt="Guides preparing safety equipment" />
+          <figcaption>Guide School</figcaption>
+        </figure>
       </div>
     </section>
   </main>
 
   <footer>
-    <p>©2025 • White Water Rafting</p>
-    <nav class="social">
-      <a href="https://facebook.com" target="_blank">Facebook</a>
-      <a href="https://instagram.com" target="_blank">Instagram</a>
-      <a href="https://twitter.com" target="_blank">Twitter</a>
-    </nav>
+    <p>©2025 • White Water Rafting • Yago Franco</p>
+    <div class="socialmedia">
+      <a href="https://facebook.com" target="_blank" rel="noopener">
+        <img src="images/facebook.png" alt="Facebook icon" />
+      </a>
+      <a href="https://instagram.com" target="_blank" rel="noopener">
+        <img src="images/instagram.png" alt="Instagram icon" />
+      </a>
+      <a href="https://twitter.com" target="_blank" rel="noopener">
+        <img src="images/twitter.png" alt="Twitter icon" />
+      </a>
+    </div>
   </footer>
 </body>
 </html>
+
+
+    <!-- ADVENTURE AWAITS -->
+    <section class="adventure">
+      <h2>Adventure Awaits You!</h2>
+      <div class="gallery">
+        <figure>
+          <img src="images/adven1.jpg" alt="Raft boat surfing a class III rapid" />
+          <figcaption>Sunny Bend</figcaption>
+        </figure>
+        <figure>
+          <img src="images/adven2.jpg" alt="Team paddling in sync through waves" />
+          <figcaption>Team Spirit</figcaption>
+        </figure>
+        <figure>
+          <img src="images/adven3.jpg" alt="Red canyon walls along the river" />
+          <figcaption>Red Canyon</figcaption>
+        </figure>
+        <figure>
+          <img src="images/adven4.jpg" alt="Family enjoying a calm river section" />
+          <figcaption>Family Splash</figcaption>
+        </figure>
+        <figure>
+          <img src="images/adven5.jpg" alt="Guides preparing safety gear for the trip" />
+          <figcaption>Guide School</figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+ <footer>
+  <p>©2025 • White Water Rafting • Yago Franco</p>
+  <div class="socialmedia">
+    <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
+      <img src="images/facebook.png" alt="Facebook icon" width="32" height="32">
+    </a>
+    <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+      <img src="images/instagram.png" alt="Instagram icon" width="32" height="32">
+    </a>
+    <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">
+      <img src="images/twitter.png" alt="Twitter icon" width="32" height="32">
+    </a>
+  </div>
+</footer>
+
+</body>
+</html>
+
