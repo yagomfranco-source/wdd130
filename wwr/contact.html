@@ -1,37 +1,133 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en-US">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>White Water Rafting | About Us</title>
-  <meta name="description" content="About Us page for the White Water Rafting website.">
-  <meta name="author" content="Yago Franco">
-  <link rel="stylesheet" href="styles/rafting.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WWR | Contact Us</title>
+  <meta name="description" content="Contact White Water Rafting for questions, reservations, and feedback." />
+  <meta name="author" content="Yago Franco" />
+  <link rel="stylesheet" href="styles/rafting.css" />
 </head>
-
 <body>
-  <header>
-    <div class="brand">
-      <!-- If the logo file is missing, hide the image automatically -->
-      <img src="images/logo.jpg" alt="White Water Rafting logo" onerror="this.style.display='none'" />
-      <span class="brand-text">White Water Rafting</span>
-    </div>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="about.html">About Us</a>
-      <a href="trips.html">Trips</a>
-      <a href="contact.html" class="active">Contact Us</a>
-    </nav>
-  </header>
+<header>
+  <div class="brand">
+    <img src="images/logo.jpg" alt="White Water Rafting logo" onerror="this.style.display='none'">
+    <span class="brand-text">White Water Rafting</span>
+  </div>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="about.html">About Us</a>
+    <a href="trips.html">Trips</a>
+    <a href="contact.html" class="active">Contact Us</a>
+  </nav>
+</header>
 
-  <main>
-    <h1>Contact Us</h1>
-    <!-- Simple placeholder content to keep the page valid and styled -->
-    <p>If you have questions about trips, availability, or safety, we are happy to help.</p>
-    <p>Email: info@whiteriverrafting.example • Phone: (555) 555-5555</p>
-  </main>
+<main>
+  <section class="hero hero--short">
+    <img src="images/hero.jpg" alt="River and canyon">
+    <article class="hero-card">
+      <h1>Contact Us</h1>
+      <p>We’re happy to help with trip questions, availability, safety, group rates, and more.</p>
+    </article>
+  </section>
 
- <footer>
+  <section class="contact-grid">
+    <!-- Company info -->
+    <aside class="company-card">
+      <h2>Company Info</h2>
+      <ul class="contact-list">
+        <li><strong>Address:</strong> 123 Rapid Run Rd, Canyon City, CO</li>
+        <li><strong>Phone:</strong> (555) 555-5555</li>
+        <li><strong>Email:</strong> info@whiteriverrafting.example</li>
+        <li><strong>Hours:</strong> Mon–Sat, 8:00–18:00</li>
+      </ul>
+
+      <figure class="location">
+        <!-- Se quiser, troque por um embed do Google Maps -->
+        <img src="images/brazil.jpg" alt="Our basecamp area">
+        <figcaption>Basecamp &amp; gear yard</figcaption>
+      </figure>
+
+      <div class="socialmedia">
+        <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
+          <img src="images/facebook.png" alt="Facebook icon" width="32" height="32">
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+          <img src="images/instagram.png" alt="Instagram icon" width="32" height="32">
+        </a>
+        <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">
+          <img src="images/twitter.png" alt="Twitter icon" width="32" height="32">
+        </a>
+      </div>
+    </aside>
+
+    <!-- Contact form -->
+    <section class="contact-card">
+      <h2>Send us a message</h2>
+
+      <form action="https://httpbin.org/post" method="post" class="contact-form">
+        <!-- Your Info -->
+        <fieldset>
+          <legend>Your Info</legend>
+
+          <label for="fullname">Full Name</label>
+          <input id="fullname" name="fullname" type="text" autocomplete="name" required>
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" autocomplete="email" required>
+
+          <label for="phone">Phone (optional)</label>
+          <input id="phone" name="phone" type="tel" autocomplete="tel">
+        </fieldset>
+
+        <!-- Purpose -->
+        <fieldset>
+          <legend>What can we help you with?</legend>
+
+          <label class="radio">
+            <input type="radio" name="purpose" value="general" required>
+            General question
+          </label>
+
+          <label class="radio">
+            <input type="radio" name="purpose" value="reservation" required>
+            Trip reservation
+          </label>
+
+          <label class="radio">
+            <input type="radio" name="purpose" value="feedback" required>
+            Website feedback
+          </label>
+
+          <label for="trip" class="sr-only">Trip preference</label>
+          <select id="trip" name="trip">
+            <option value="" selected disabled>Choose a trip (optional)…</option>
+            <option value="scenic">Scenic Float</option>
+            <option value="class-iii">Class III Fun Run</option>
+            <option value="class-iv">Class IV Canyon</option>
+          </select>
+        </fieldset>
+
+        <!-- Message -->
+        <fieldset>
+          <legend>Your Message</legend>
+
+          <label for="message" class="sr-only">Message</label>
+          <textarea id="message" name="message" rows="6" required placeholder="Type your message…"></textarea>
+
+          <label class="check">
+            <input type="checkbox" name="subscribe" value="yes">
+            Send me trip updates and discounts
+          </label>
+        </fieldset>
+
+        <button type="submit" class="btn">Send Message</button>
+      </form>
+    </section>
+  </section>
+</main>
+
+<footer>
   <p>©2025 • White Water Rafting • Yago Franco</p>
   <div class="socialmedia">
     <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
@@ -45,4 +141,5 @@
     </a>
   </div>
 </footer>
-
+</body>
+</html>
