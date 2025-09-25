@@ -2,20 +2,18 @@
 <html lang="en-US">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>WWR | Contact Us</title>
-  <meta name="description" content="Contact White Water Rafting for questions, availability, safety, or group rates." />
+  <meta name="description" content="Contact White Water Rafting for questions, reservations, and info." />
   <meta name="author" content="Yago Franco" />
   <link rel="stylesheet" href="styles/rafting.css" />
 </head>
 <body>
   <header>
     <div class="brand">
-      <!-- Hide the logo automatically if the file is missing -->
       <img src="images/logo.jpg" alt="White Water Rafting logo" onerror="this.style.display='none'">
       <span class="brand-text">White Water Rafting</span>
     </div>
-
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About Us</a>
@@ -25,19 +23,19 @@
   </header>
 
   <main>
-    <!-- HERO -->
+    <!-- hero -->
     <section class="hero">
-      <img src="images/hero.jpg" alt="Rafting on a scenic river">
+      <img src="images/hero.jpg" alt="Rafters on a mountain river">
       <article class="hero-card">
         <h1>Contact Us</h1>
         <p>We’re happy to help with trip questions, availability, safety, group rates, and more.</p>
       </article>
     </section>
 
-    <!-- COMPANY INFO -->
-    <section class="company">
+    <!-- company info -->
+    <section class="company-info">
       <h2>Company Info</h2>
-      <ul>
+      <ul class="contact-list">
         <li><strong>Address:</strong> 123 Rapid Run Rd, Canyon City, CO</li>
         <li><strong>Phone:</strong> (555) 555-5555</li>
         <li><strong>Email:</strong> info@whiteriverrafting.example</li>
@@ -45,16 +43,15 @@
       </ul>
     </section>
 
-    <!-- CONTACT FORM -->
-    <section class="contact">
+    <!-- form -->
+    <section class="contact-form">
       <h2>Send us a message</h2>
 
-      <form action="#" method="post">
+      <form>
         <fieldset>
           <legend>Your Info</legend>
-
-          <label for="fullname">Full Name</label>
-          <input id="fullname" name="fullname" type="text" required>
+          <label for="name">Full Name</label>
+          <input id="name" name="name" type="text" required>
 
           <label for="email">Email</label>
           <input id="email" name="email" type="email" required>
@@ -65,73 +62,56 @@
 
         <fieldset>
           <legend>What can we help you with?</legend>
+          <label><input type="radio" name="topic" value="general" required> General question</label>
+          <label><input type="radio" name="topic" value="reservation"> Trip reservation</label>
+          <label><input type="radio" name="topic" value="feedback"> Website feedback</label>
 
-          <label>
-            <input type="radio" name="topic" value="general" required>
-            General question
-          </label>
-
-          <label>
-            <input type="radio" name="topic" value="reservation">
-            Trip reservation
-          </label>
-
-          <label>
-            <input type="radio" name="topic" value="feedback">
-            Website feedback
-          </label>
-
-          <label for="trip-pref">Trip preference (optional)</label>
-          <select id="trip-pref" name="trippref">
-            <option value="" disabled selected>Choose a trip (optional)…</option>
-            <option value="halfday">Half-day Raft</option>
-            <option value="fullday">Full-day Raft</option>
-            <option value="overnight">Overnight Expedition</option>
+          <label for="trip">Trip preference (optional)</label>
+          <select id="trip" name="trip">
+            <option value="">Choose a trip (optional)…</option>
+            <option>Family Float</option>
+            <option>Red Canyon</option>
+            <option>Thunder Run</option>
           </select>
         </fieldset>
 
         <fieldset>
           <legend>Your Message</legend>
-
           <label for="message">Message</label>
-          <textarea id="message" name="message" rows="5" placeholder="Type your message…" required></textarea>
+          <textarea id="message" name="message" rows="5" placeholder="Type your message…"></textarea>
 
-          <label class="checkbox">
-            <input type="checkbox" id="newsletter" name="newsletter">
-            Send me trip updates and discounts
+          <label class="inline">
+            <input type="checkbox" name="optin"> Send me trip updates and discounts
           </label>
         </fieldset>
 
-        <!-- Use button element as required by the audit -->
         <button type="submit">Send Message</button>
       </form>
     </section>
 
-    <!-- GOOGLE MAP (embed) -->
-    <section class="map">
+    <!-- map -->
+    <section class="map-section">
       <h2>Basecamp Map</h2>
+      <!-- width do iframe deve ser numérico; controle 100% via CSS -->
       <iframe
+        class="map-frame"
         src="https://www.google.com/maps?q=Canyon%20City%2C%20CO&output=embed"
-        width="100%" height="320" style="border:0" loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade" allowfullscreen
-        aria-label="Map showing our basecamp location">
+        width="600" height="320"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        aria-label="Map showing our basecamp location"
+        allowfullscreen>
       </iframe>
     </section>
   </main>
 
   <footer>
     <p>©2025 • White Water Rafting • Yago Franco</p>
-    <nav class="social">
-      <a href="https://facebook.com" target="_blank" rel="noopener">
-        <img src="images/facebook.png" alt="Facebook icon">
-      </a>
-      <a href="https://instagram.com" target="_blank" rel="noopener">
-        <img src="images/instagram.png" alt="Instagram icon">
-      </a>
-      <a href="https://twitter.com" target="_blank" rel="noopener">
-        <img src="images/twitter.png" alt="Twitter icon">
-      </a>
-    </nav>
+    <div class="socialmedia">
+      <a href="https://facebook.com" target="_blank" rel="noopener"><img src="images/facebook.png" alt="Facebook icon"></a>
+      <a href="https://instagram.com" target="_blank" rel="noopener"><img src="images/instagram.png" alt="Instagram icon"></a>
+      <a href="https://twitter.com" target="_blank" rel="noopener"><img src="images/twitter.png" alt="Twitter icon"></a>
+    </div>
   </footer>
 </body>
 </html>
