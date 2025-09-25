@@ -4,142 +4,135 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>WWR | Contact Us</title>
-  <meta name="description" content="Contact White Water Rafting for questions, reservations, and feedback." />
+  <meta name="description" content="Contact White Water Rafting for questions, availability, safety, or group rates." />
   <meta name="author" content="Yago Franco" />
   <link rel="stylesheet" href="styles/rafting.css" />
 </head>
 <body>
-<header>
-  <div class="brand">
-    <img src="images/logo.jpg" alt="White Water Rafting logo" onerror="this.style.display='none'">
-    <span class="brand-text">White Water Rafting</span>
-  </div>
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About Us</a>
-    <a href="trips.html">Trips</a>
-    <a href="contact.html" class="active">Contact Us</a>
-  </nav>
-</header>
+  <header>
+    <div class="brand">
+      <!-- Hide the logo automatically if the file is missing -->
+      <img src="images/logo.jpg" alt="White Water Rafting logo" onerror="this.style.display='none'">
+      <span class="brand-text">White Water Rafting</span>
+    </div>
 
-<main>
-  <section class="hero hero--short">
-    <img src="images/hero.jpg" alt="River and canyon">
-    <article class="hero-card">
-      <h1>Contact Us</h1>
-      <p>We’re happy to help with trip questions, availability, safety, group rates, and more.</p>
-    </article>
-  </section>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="trips.html">Trips</a>
+      <a href="contact.html" class="active">Contact Us</a>
+    </nav>
+  </header>
 
-  <section class="contact-grid">
-    <!-- Company info -->
-    <aside class="company-card">
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <img src="images/hero.jpg" alt="Rafting on a scenic river">
+      <article class="hero-card">
+        <h1>Contact Us</h1>
+        <p>We’re happy to help with trip questions, availability, safety, group rates, and more.</p>
+      </article>
+    </section>
+
+    <!-- COMPANY INFO -->
+    <section class="company">
       <h2>Company Info</h2>
-      <ul class="contact-list">
+      <ul>
         <li><strong>Address:</strong> 123 Rapid Run Rd, Canyon City, CO</li>
         <li><strong>Phone:</strong> (555) 555-5555</li>
         <li><strong>Email:</strong> info@whiteriverrafting.example</li>
         <li><strong>Hours:</strong> Mon–Sat, 8:00–18:00</li>
       </ul>
+    </section>
 
-      <figure class="location">
-        <!-- Se quiser, troque por um embed do Google Maps -->
-        <img src="images/brazil.jpg" alt="Our basecamp area">
-        <figcaption>Basecamp &amp; gear yard</figcaption>
-      </figure>
-
-      <div class="socialmedia">
-        <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
-          <img src="images/facebook.png" alt="Facebook icon" width="32" height="32">
-        </a>
-        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
-          <img src="images/instagram.png" alt="Instagram icon" width="32" height="32">
-        </a>
-        <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">
-          <img src="images/twitter.png" alt="Twitter icon" width="32" height="32">
-        </a>
-      </div>
-    </aside>
-
-    <!-- Contact form -->
-    <section class="contact-card">
+    <!-- CONTACT FORM -->
+    <section class="contact">
       <h2>Send us a message</h2>
 
-      <form action="https://httpbin.org/post" method="post" class="contact-form">
-        <!-- Your Info -->
+      <form action="#" method="post">
         <fieldset>
           <legend>Your Info</legend>
 
           <label for="fullname">Full Name</label>
-          <input id="fullname" name="fullname" type="text" autocomplete="name" required>
+          <input id="fullname" name="fullname" type="text" required>
 
           <label for="email">Email</label>
-          <input id="email" name="email" type="email" autocomplete="email" required>
+          <input id="email" name="email" type="email" required>
 
           <label for="phone">Phone (optional)</label>
-          <input id="phone" name="phone" type="tel" autocomplete="tel">
+          <input id="phone" name="phone" type="tel" placeholder="">
         </fieldset>
 
-        <!-- Purpose -->
         <fieldset>
           <legend>What can we help you with?</legend>
 
-          <label class="radio">
-            <input type="radio" name="purpose" value="general" required>
+          <label>
+            <input type="radio" name="topic" value="general" required>
             General question
           </label>
 
-          <label class="radio">
-            <input type="radio" name="purpose" value="reservation" required>
+          <label>
+            <input type="radio" name="topic" value="reservation">
             Trip reservation
           </label>
 
-          <label class="radio">
-            <input type="radio" name="purpose" value="feedback" required>
+          <label>
+            <input type="radio" name="topic" value="feedback">
             Website feedback
           </label>
 
-          <label for="trip" class="sr-only">Trip preference</label>
-          <select id="trip" name="trip">
-            <option value="" selected disabled>Choose a trip (optional)…</option>
-            <option value="scenic">Scenic Float</option>
-            <option value="class-iii">Class III Fun Run</option>
-            <option value="class-iv">Class IV Canyon</option>
+          <label for="trip-pref">Trip preference (optional)</label>
+          <select id="trip-pref" name="trippref">
+            <option value="" disabled selected>Choose a trip (optional)…</option>
+            <option value="halfday">Half-day Raft</option>
+            <option value="fullday">Full-day Raft</option>
+            <option value="overnight">Overnight Expedition</option>
           </select>
         </fieldset>
 
-        <!-- Message -->
         <fieldset>
           <legend>Your Message</legend>
 
-          <label for="message" class="sr-only">Message</label>
-          <textarea id="message" name="message" rows="6" required placeholder="Type your message…"></textarea>
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="5" placeholder="Type your message…" required></textarea>
 
-          <label class="check">
-            <input type="checkbox" name="subscribe" value="yes">
+          <label class="checkbox">
+            <input type="checkbox" id="newsletter" name="newsletter">
             Send me trip updates and discounts
           </label>
         </fieldset>
 
-        <button type="submit" class="btn">Send Message</button>
+        <!-- Use button element as required by the audit -->
+        <button type="submit">Send Message</button>
       </form>
     </section>
-  </section>
-</main>
 
-<footer>
-  <p>©2025 • White Water Rafting • Yago Franco</p>
-  <div class="socialmedia">
-    <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
-      <img src="images/facebook.png" alt="Facebook icon" width="32" height="32">
-    </a>
-    <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
-      <img src="images/instagram.png" alt="Instagram icon" width="32" height="32">
-    </a>
-    <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">
-      <img src="images/twitter.png" alt="Twitter icon" width="32" height="32">
-    </a>
-  </div>
-</footer>
+    <!-- GOOGLE MAP (embed) -->
+    <section class="map">
+      <h2>Basecamp Map</h2>
+      <iframe
+        src="https://www.google.com/maps?q=Canyon%20City%2C%20CO&output=embed"
+        width="100%" height="320" style="border:0" loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade" allowfullscreen
+        aria-label="Map showing our basecamp location">
+      </iframe>
+    </section>
+  </main>
+
+  <footer>
+    <p>©2025 • White Water Rafting • Yago Franco</p>
+    <nav class="social">
+      <a href="https://facebook.com" target="_blank" rel="noopener">
+        <img src="images/facebook.png" alt="Facebook icon">
+      </a>
+      <a href="https://instagram.com" target="_blank" rel="noopener">
+        <img src="images/instagram.png" alt="Instagram icon">
+      </a>
+      <a href="https://twitter.com" target="_blank" rel="noopener">
+        <img src="images/twitter.png" alt="Twitter icon">
+      </a>
+    </nav>
+  </footer>
 </body>
 </html>
+
