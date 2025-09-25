@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>WWR | Quiz</title>
+  <link rel="stylesheet" href="styles/quiz.css" />
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html">White Water Rafting</a>
+
+    <nav class="top-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="trips.html">Trips</a>
+      <a href="contact.html">Contact</a>
+      <a class="active" href="quiz.html" aria-current="page">Quiz</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Rafting Knowledge Quiz</h1>
+    <p class="lead">
+      Answer the questions below. This is a quick check of basic rafting knowledge.
+    </p>
+
+    <form action="https://httpbin.org/post" method="post" novalidate>
+      <!-- CONTACT INFO -->
+      <fieldset>
+        <legend>Your Info</legend>
+
+        <label for="name">Full Name</label>
+        <input id="name" name="name" type="text" autocomplete="name" required />
+
+        <label for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" required />
+      </fieldset>
+
+      <!-- QUESTIONS -->
+      <fieldset>
+        <legend>Questions</legend>
+
+        <!-- Q1: SELECT -->
+        <label for="q1">1) Which river class is generally best for beginners?</label>
+        <select id="q1" name="q1" required>
+          <option value="" disabled selected>Choose one…</option>
+          <option value="i">Class I — Easy</option>
+          <option value="ii">Class II — Novice</option>
+          <option value="iii">Class III — Intermediate</option>
+          <option value="iv">Class IV — Advanced</option>
+          <option value="v">Class V — Expert</option>
+        </select>
+
+        <!-- Q2: RADIO -->
+        <fieldset class="inline">
+          <legend>2) Do you own a properly fitted PFD (life jacket)?</legend>
+          <label><input type="radio" name="q2" value="yes" required /> Yes</label>
+          <label><input type="radio" name="q2" value="no" /> No</label>
+        </fieldset>
+
+        <!-- Q3: TEXTAREA -->
+        <label for="q3">3) Briefly describe your rafting experience:</label>
+        <textarea id="q3" name="q3" rows="5" placeholder="A few sentences…" required></textarea>
+
+        <!-- (OPCIONAL) CHECKBOX -->
+        <label class="check">
+          <input type="checkbox" name="updates" value="yes" />
+          Send me trip updates and discounts
+        </label>
+      </fieldset>
+
+      <div class="actions">
+        <button type="submit">Submit Quiz</button>
+        <button type="reset" class="ghost">Reset</button>
+      </div>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <p>©2025 • White Water Rafting</p>
+  </footer>
+</body>
+</html>
