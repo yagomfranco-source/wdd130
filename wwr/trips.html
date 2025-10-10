@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>White Water Rafting | About Us</title>
-  <meta name="description" content="About Us page for the White Water Rafting website.">
+  <title>White Water Rafting | Trips</title>
+  <meta name="description" content="Browse our rafting trips, compare packages in the table, and contact us to book.">
   <meta name="author" content="Yago Franco">
   <link rel="stylesheet" href="styles/rafting.css">
 </head>
@@ -13,36 +13,126 @@
   <header>
     <div class="brand">
       <!-- If the logo file is missing, hide the image automatically -->
-      <img src="images/logo.jpg" alt="White Water Rafting logo" onerror="this.style.display='none'" />
+      <img src="images/logo.jpg" alt="White Water Rafting logo" onerror="this.style.display='none'">
       <span class="brand-text">White Water Rafting</span>
     </div>
     <nav>
       <a href="index.html">Home</a>
       <a href="about.html">About Us</a>
-      <a href="trips.html" class="active">Trips</a>
+      <a href="trips.html" class="active" aria-current="page">Trips</a>
       <a href="contact.html">Contact Us</a>
     </nav>
   </header>
 
   <main>
-    <h1>Trips</h1>
-    <p>Choose from beginner-friendly floats to advanced white water runs with experienced guides.</p>
+    <!-- CTA que leva para Contact -->
+    <section class="cta-bar">
+      <h1>Ready to Book?</h1>
+      <p>Talk to our team and choose the perfect river day.</p>
+      <a class="btn btn-primary" href="contact.html">Contact Us</a>
+    </section>
+
+    <!-- 3 descrições de viagens com fotos -->
+    <section class="trips-grid container" aria-label="Featured rafting trips">
+      <article class="trip">
+        <img src="images/adven1.jpg" alt="Calm river section for families"
+             onerror="this.src='https://picsum.photos/seed/family-raft/900/600'">
+        <div class="trip-body">
+          <h2>Half-Day Family Float</h2>
+          <p>Beginner-friendly scenic float with mild Class I–II rapids.</p>
+          <ul>
+            <li>Duration: 3 hours</li>
+            <li>Snacks &amp; gear included</li>
+            <li>Best season: Oct–Mar</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="trip">
+        <img src="images/adven2.jpg" alt="Canyon walls and mid-level rapids"
+             onerror="this.src='https://picsum.photos/seed/canyon-trip/900/600'">
+        <div class="trip-body">
+          <h2>Canyon Adventure</h2>
+          <p>Our most popular day trip. Fun Class II–III rapids and canyon views.</p>
+          <ul>
+            <li>Duration: 6 hours</li>
+            <li>Lunch included</li>
+            <li>Minimum age: 10</li>
+          </ul>
+        </div>
+      </article>
+
+      <article class="trip">
+        <img src="images/adven3.jpg" alt="Crew paddling through big whitewater"
+             onerror="this.src='https://picsum.photos/seed/extreme-trip/900/600'">
+        <div class="trip-body">
+          <h2>Extreme Rapids</h2>
+          <p>For experienced paddlers seeking Class IV thrills with expert guides.</p>
+          <ul>
+            <li>Duration: Full day</li>
+            <li>Wetsuits &amp; safety briefing</li>
+            <li>Good fitness required</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <!-- Tabela com os passeios -->
+    <section class="container">
+      <h2>All Trips at a Glance</h2>
+      <div class="table-wrap">
+        <table>
+          <caption>Compare duration, difficulty, and price</caption>
+          <thead>
+            <tr>
+              <th scope="col">Trip</th>
+              <th scope="col">Difficulty</th>
+              <th scope="col">Duration</th>
+              <th scope="col">Season</th>
+              <th scope="col">Price (per person)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">Half-Day Family Float</th>
+              <td>Class I–II</td>
+              <td>3h</td>
+              <td>Oct–Mar</td>
+              <td>$65</td>
+            </tr>
+            <tr>
+              <th scope="row">Canyon Adventure</th>
+              <td>Class II–III</td>
+              <td>6h</td>
+              <td>Year-round</td>
+              <td>$120</td>
+            </tr>
+            <tr>
+              <th scope="row">Extreme Rapids</th>
+              <td>Class IV</td>
+              <td>Full day</td>
+              <td>May–Sep</td>
+              <td>$185</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
   </main>
 
   <footer>
-  <p>©2025 • White Water Rafting • Yago Franco</p>
-  <div class="socialmedia">
-    <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
-      <img src="images/facebook.png" alt="Facebook icon" width="32" height="32">
-    </a>
-    <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
-      <img src="images/instagram.png" alt="Instagram icon" width="32" height="32">
-    </a>
-    <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter">
-      <img src="images/twitter.png" alt="Twitter icon" width="32" height="32">
-    </a>
-  </div>
-</footer>
-
+    <p>©2025 • White Water Rafting • Yago Franco</p>
+    <div class="socialmedia">
+      <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
+        <img src="images/facebook.png" alt="Facebook icon" width="32" height="32">
+      </a>
+      <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+        <img src="images/instagram.png" alt="Instagram icon" width="32" height="32">
+      </a>
+      <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter (X)">
+        <img src="images/twitter.png" alt="Twitter icon" width="32" height="32">
+      </a>
+    </div>
+  </footer>
 </body>
 </html>

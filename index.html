@@ -1,59 +1,152 @@
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Yago Franco | WDD 130</title>
-
-  <!-- W02 meta -->
-  <meta name="description" content="Home page of Yago Franco for the WDD130 course. HTML and CSS practice." />
-  <meta name="author" content="Yago Franco" />
-
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>White Water Rafting | Home</title>
+  <meta name="description" content="Guided white water rafting adventures for families and thrill seekers. Book trips, join our newsletter, and explore our most popular routes.">
+  <meta name="author" content="Yago Franco">
+  <link rel="stylesheet" href="styles/rafting.css">
 </head>
+
 <body>
-  <header class="site-header">
-    <nav class="topnav">
-      <a href="index.html" class="active">Home</a>
-      <a href="wwr/about.html">Rafting Website</a>
-      <a href="https://www.linkedin.com/" target="_blank" rel="noopener">LinkedIn</a>
-      <a href="https://www.facebook.com/" target="_blank" rel="noopener">Facebook</a>
+  <header>
+    <div class="brand">
+      <!-- If the logo file is missing, hide the image automatically -->
+      <img src="images/logo.jpg" alt="White Water Rafting logo" onerror="this.style.display='none'">
+      <span class="brand-text">White Water Rafting</span>
+    </div>
+    <nav>
+      <a href="index.html" class="active" aria-current="page">Home</a>
+      <a href="about.html">About Us</a>
+      <a href="trips.html">Trips</a>
+      <a href="contact.html">Contact Us</a>
     </nav>
   </header>
 
-  <main class="container">
-    <h1>Yago Franco | WDD130</h1>
-
-    <section class="intro">
-      <!-- left column: text + links -->
-      <div class="intro-text">
-        <p>Hello! My name is Yago Franco and I am from Brazil.</p>
-        <div class="links">
-          <ul>
-            <li><a href="https://www.churchofjesuschrist.org/temples/details/sao-paulo-brazil-temple" target="_blank" rel="noopener">São Paulo Brazil Temple</a></li>
-            <li><a href="https://www.churchofjesuschrist.org/temples/details/recife-brazil-temple" target="_blank" rel="noopener">Recife Brazil Temple</a></li>
-            <li><a href="https://www.churchofjesuschrist.org/temples/details/porto-alegre-brazil-temple" target="_blank" rel="noopener">Porto Alegre Brazil Temple</a></li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- right column: profile picture -->
-      <img class="profile" src="wwr/images/profile.jpg" alt="Hello, my name is Yago Franco"
-           onerror="this.style.display='none'">
+  <main>
+    <!-- HERO com título posicionado + CTA para Trips -->
+    <section class="hero">
+      <img src="images/hero.jpg" alt="Rafting boat on a scenic river" onerror="this.src='https://picsum.photos/seed/river-hero/1600/700'">
+      <h1 class="hero-title">Find Your Flow on the River</h1>
+      <p class="hero-sub">Thrilling rapids, expert guides, unforgettable memories.</p>
+      <a class="btn hero-cta" href="trips.html">Explore Trips</a>
     </section>
 
-    <aside class="box">
-      <h2>Brazil</h2>
-      <img src="wwr/images/brazil.jpg" alt="Brazil flag" onerror="this.style.display='none'">
-      <p>
-        Brazil is known for its cultural diversity, beautiful nature, and friendly people.
-        It also has some of the best food in the world.
-      </p>
-    </aside>
-  </main>
+    <!-- NEWSLETTER (name + email) -->
+    <section class="newsletter container">
+      <h2>Newsletter</h2>
+      <p>Get trip openings, seasonal deals, and pro tips in your inbox.</p>
+      <form class="newsletter-form" action="#" method="post">
+        <label>Name
+          <input type="text" name="name" required autocomplete="name">
+        </label>
+        <label>Email
+          <input type="email" name="email" required autocomplete="email">
+        </label>
+        <button class="btn" type="submit">Subscribe</button>
+      </form>
+    </section>
 
-  <footer class="site-footer">
-    <p>©2025 • Yago Franco • São Paulo, Brazil</p>
+    <!-- GRID (>1 coluna) com conteúdo + imagens -->
+    <section class="home-grid container" aria-label="Highlights">
+      <article class="card">
+        <img src="images/family.jpg" alt="Family rafting" onerror="this.src='https://picsum.photos/seed/family-raft/900/600'">
+        <div class="card-body">
+          <h3>Family Friendly</h3>
+          <p>Perfect for first timers—gentle currents and lots of smiles.</p>
+        </div>
+      </article>
+
+      <article class="card">
+        <img src="images/adventure.jpg" alt="Raft in a rapid" onerror="this.src='https://picsum.photos/seed/adventure-raft/900/600'">
+        <div class="card-body">
+          <h3>High Adventure</h3>
+          <p>Step up to Class III–IV rapids with our most experienced guides.</p>
+        </div>
+      </article>
+
+      <article class="card card-accent">
+        <h3>Why Choose Us</h3>
+        <ul>
+          <li>Certified guides &amp; top-tier gear</li>
+          <li>Small group sizes</li>
+          <li>Flexible rescheduling</li>
+        </ul>
+        <a class="btn btn-secondary" href="trips.html">See All Trips</a>
+      </article>
+    </section>
+  </main>
+<main>
+  <!-- HERO com título posicionado + CTA para Trips -->
+  <section class="hero">
+    <img src="images/hero.jpg" alt="Rafting boat on a scenic river"
+         onerror="this.src='https://picsum.photos/seed/river-hero/1600/700'">
+    <h1 class="hero-title">Find Your Flow on the River</h1>
+    <p class="hero-sub">Thrilling rapids, expert guides, unforgettable memories.</p>
+    <a class="btn hero-cta" href="trips.html">Explore Trips</a>
+  </section>
+
+  <!-- NEWSLETTER (name + email) -->
+  <section class="newsletter container">
+    <h2>Newsletter</h2>
+    <p>Get trip openings, seasonal deals, and pro tips in your inbox.</p>
+    <form class="newsletter-form" action="#" method="post">
+      <label>Name
+        <input type="text" name="name" required autocomplete="name">
+      </label>
+      <label>Email
+        <input type="email" name="email" required autocomplete="email">
+      </label>
+      <button class="btn" type="submit">Subscribe</button>
+    </form>
+  </section>
+
+  <!-- GRID (>1 coluna) com conteúdo + imagens -->
+  <section class="home-grid container" aria-label="Highlights">
+    <article class="card">
+      <img src="images/family.jpg" alt="Family rafting"
+           onerror="this.src='https://picsum.photos/seed/family-raft/900/600'">
+      <div class="card-body">
+        <h3>Family Friendly</h3>
+        <p>Perfect for first timers—gentle currents and lots of smiles.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <img src="images/adventure.jpg" alt="Raft in a rapid"
+           onerror="this.src='https://picsum.photos/seed/adventure-raft/900/600'">
+      <div class="card-body">
+        <h3>High Adventure</h3>
+        <p>Step up to Class III–IV rapids with our most experienced guides.</p>
+      </div>
+    </article>
+
+    <article class="card card-accent">
+      <h3>Why Choose Us</h3>
+      <ul>
+        <li>Certified guides &amp; top-tier gear</li>
+        <li>Small group sizes</li>
+        <li>Flexible rescheduling</li>
+      </ul>
+      <a class="btn btn-secondary" href="trips.html">See All Trips</a>
+    </article>
+  </section>
+</main>
+
+  <footer>
+    <p>©2025 • White Water Rafting • Yago Franco</p>
+    <div class="socialmedia">
+      <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
+        <img src="images/facebook.png" alt="Facebook icon" width="32" height="32">
+      </a>
+      <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+        <img src="images/instagram.png" alt="Instagram icon" width="32" height="32">
+      </a>
+      <a href="https://twitter.com" target="_blank" rel="noopener" aria-label="Twitter (X)">
+        <img src="images/twitter.png" alt="Twitter icon" width="32" height="32">
+      </a>
+    </div>
   </footer>
 </body>
 </html>
